@@ -5,6 +5,6 @@ import org.eclipse.microprofile.openapi.annotations.info.Info;
 
 import javax.ws.rs.core.Application;
 
-@OpenAPIDefinition(info = @Info(title = "Getting Started API", description = "Our test API description", version = "1.2"))
+@OpenAPIDefinition(info = @Info(title = "Greetings translator API", description = "short API test", version = "1.2"))
 public class QuarkusApplication extends Application {
 }
