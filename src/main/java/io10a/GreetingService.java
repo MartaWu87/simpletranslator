@@ -5,9 +5,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.NotFoundException;
-import javax.ws.rs.POST;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -32,7 +29,7 @@ public class GreetingService {
     }
 
     public String sayHello(String name) {
-        logger.info("user check existing country " + name);
+        logger.info("user check existing country : " + name);
         if (name == null) {
             throw new NotFoundException();
         }
@@ -60,6 +57,7 @@ public class GreetingService {
         logger.info("user try edit something");
         if (language.getName().equals(name)) {
             greetings.put(name, language.getValue());
+            logger.info("code sucessfully updated : " + language.getName());
         } else {
             throw new NotFoundException();
         }

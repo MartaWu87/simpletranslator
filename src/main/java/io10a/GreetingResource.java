@@ -38,7 +38,7 @@ public class GreetingResource {
             return Response.status(400).build();
         }
         greetingService.newHello(language);
-        logger.info("new code succesfully added  : " + language.getName()); //uwaga !!!!!
+        logger.info("new code succesfully added  : " + language.getName()); //uwaga !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         return Response.ok(language).build();
     }
 
